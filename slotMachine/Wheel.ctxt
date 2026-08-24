@@ -1,0 +1,29 @@
+#BlueJ class context
+#Sat Aug 22 17:08:08 COT 2026
+comment0.target=Wheel
+comment0.text=\r\n Representa una rueda de la maquina tragamonedas.\r\n Una rueda puede contener varios simbolos y seleccionar\r\n uno aleatoriamente cuando gira.\r\n
+comment1.target=Wheel()
+comment1.text=\r\n Construye una rueda vacia\r\n
+comment10.params=color
+comment10.target=int findSymbol(java.lang.String)
+comment10.text=\r\n Busca un simbolo por su color\r\n @param color (color que se desea buscar)\r\n @return posicion del smbolo o -1 si no existe\r\n
+comment2.params=index color
+comment2.target=void addSymbol(int, java.lang.String)
+comment2.text=\r\n Adiciona un simbolo a la rueda\r\n @param index (donde se adicionara el simbolo)\r\n @param color (color del simbolo)\r\n
+comment3.params=color
+comment3.target=void delSymbol(java.lang.String)
+comment3.text=\r\n Elimina un simbolo de acuerdo al color\r\n @param color (color del simbolo a eliminar)\r\n
+comment4.target=void makeVisible()
+comment4.text=\r\n Hace visible la rueda\r\n
+comment5.target=void makeInvisible()
+comment5.text=\r\n Hace invisible la rueda\r\n
+comment6.params=color
+comment6.target=void placeSymbol(java.lang.String)
+comment6.text=\r\n Ubica como visible un simbolo por su color\r\n @param color (color del simbolo a mostrar)\r\n
+comment7.target=void spin()
+comment7.text=\r\n Gira la rueda seleccionando aleatoriamente un simbolo\r\n
+comment8.target=Symbol getVisibleSymbol()
+comment8.text=\r\n Retorna simbolo actualmente visible\r\n @return simbolo visible\r\n
+comment9.target=java.util.ArrayList getSymbols()
+comment9.text=\r\n Retorna los simbolos de la rueda\r\n @return lista de simbolos\r\n
+numComments=11
