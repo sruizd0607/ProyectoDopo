@@ -38,5 +38,12 @@ public class Symbol
     {
         figure.makeInvisible();
     }
-
+    /**
+     * Desplaza horizontalmente el símbolo en el canvas.
+     * Para ubicar las ruedas en columnas distintas
+     * @param distance desplazamiento horizontal
+     */
+    public void moveHorizontal(int distance){
+        figure.moveHorizontal(distance);
+    }
 }

@@ -1,5 +1,5 @@
 #BlueJ class context
-#Sat Aug 22 16:39:59 COT 2026
+#Tue Sep 01 17:45:12 COT 2026
 comment0.target=Symbol
 comment0.text=\r\n Representa un simbolo de la maquina tragamonedas.\r\n
 comment1.params=color
@@ -11,4 +11,7 @@ comment3.target=void makeVisible()
 comment3.text=\r\n Hace visible el simbolo\r\n
 comment4.target=void makeInvisible()
 comment4.text=\r\n Hace invisible el simbolo\r\n
-numComments=5
+comment5.params=distance
+comment5.target=void moveHorizontal(int)
+comment5.text=\r\n Desplaza horizontalmente el s\u00EDmbolo en el canvas.\r\n Para ubicar las ruedas en columnas distintas\r\n @param distance desplazamiento horizontal\r\n
+numComments=6

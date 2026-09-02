@@ -10,6 +10,8 @@ public class Wheel
 {
     private ArrayList<Symbol> symbols;
     private int visibleIndex;
+    private int columnMovement;
+    private boolean isVisible;
 
     /**
      * Construye una rueda vacia
@@ -18,6 +20,8 @@ public class Wheel
     {
         symbols = new ArrayList<Symbol>();
         visibleIndex = -1;
+        columnMovement = 0;
+        isVisible = false;
     }
     /**
      * Adiciona un simbolo a la rueda
@@ -30,7 +34,12 @@ public class Wheel
             index = 1;}
         if(index > symbols.size() + 1){
             index = symbols.size() + 1;}
-        symbols.add(index - 1, new Symbol(color));
+            
+        Symbol symbol = new Symbol(color);
+        if(columnMovement != 0){
+            symbol.moveHorizontal(columnMovement);
+        }
+        symbols.add(index - 1, symbol);
     }
     /**
      * Elimina un simbolo de acuerdo al color
@@ -55,6 +64,7 @@ public class Wheel
      */
     public void makeVisible()
     {
+        isVisible = true;
         if(visibleIndex != -1){
             symbols.get(visibleIndex).makeVisible();
         }
@@ -64,9 +74,8 @@ public class Wheel
      */
     public void makeInvisible()
     {
-        for(Symbol symbol : symbols){
-            symbol.makeInvisible();
-        }
+        hideSymbols();
+        isVisible = false;
     }
     /**
      * Ubica como visible un simbolo por su color
@@ -76,9 +85,11 @@ public class Wheel
     {
         int index = findSymbol(color);
         if(index != -1){
-            makeInvisible();
+            hideSymbols();
             visibleIndex = index;
+            if(isVisible){
             symbols.get(visibleIndex).makeVisible();
+            }
         }
     }
     /**
@@ -87,10 +98,12 @@ public class Wheel
     public void spin()
     {
         if(!symbols.isEmpty()){
-            makeInvisible();
+            hideSymbols();
             Random random = new Random();
             visibleIndex = random.nextInt(symbols.size());
+            if(isVisible){
             symbols.get(visibleIndex).makeVisible();
+            }
         }
     }
     /**
@@ -129,5 +142,28 @@ public class Wheel
             index++;
         }
         return answer;
+    }
+    /**
+     * Borra del canvas el símbolo dibujado sin necesidad de esconder la rueda
+     * 
+     */
+    private void hideSymbols(){
+        for(Symbol symbol : symbols){
+            symbol.makeInvisible();
+        }
+    }
+    /**
+     * Para ubicar la rueda completa en una columna del canvas cuando
+     * se cambia el número de ruedas.
+     * @param offset posición horizontal en la que se debe ubicar la rueda
+     */
+    public void setColumn(int offset){
+        int delta = offset - columnMovement;    //Cuanto falta moverse
+        if(delta != 0){
+            for(Symbol symbol:symbols){
+                symbol.moveHorizontal(delta);
+            }
+            columnMovement = offset;            //Actualizamos donde quedamos
+        }
     }
 }

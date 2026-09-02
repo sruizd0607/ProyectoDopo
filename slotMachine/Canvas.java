@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Canvas is a class to allow for simple graphical drawing on a canvas.
@@ -111,25 +113,64 @@ public class Canvas{
 
     /**
      * Set the foreground colour of the Canvas.
-     * @param  newColour   the new colour for the foreground of the Canvas 
+     * @param  ColorString  CSS color name for the foreground 
      */
     public void setForegroundColor(String colorString){
-        if(colorString.equals("red"))
-            graphic.setColor(Color.red);
-        else if(colorString.equals("black"))
-            graphic.setColor(Color.black);
-        else if(colorString.equals("blue"))
-            graphic.setColor(Color.blue);
-        else if(colorString.equals("yellow"))
-            graphic.setColor(Color.yellow);
-        else if(colorString.equals("green"))
-            graphic.setColor(Color.green);
-        else if(colorString.equals("magenta"))
-            graphic.setColor(Color.magenta);
-        else if(colorString.equals("white"))
-            graphic.setColor(Color.white);
-        else
-            graphic.setColor(Color.black);
+        Color color = cssColors.get(colorString == null ? "" : colorString.toLowerCase());
+        graphic.setColor(color != null ? color : Color.black);
+    }
+    /**
+     * Tabla nombres de color CSS aceptadors
+     * Nombre que no esté en al tabla se cambia a negro.
+     */
+    private static final Map<String, Color> cssColors = new HashMap<String, Color>();
+    static{
+        cssColors.put("black", Color.black);
+        cssColors.put("white", Color.white);
+        cssColors.put("red", Color.red);
+        cssColors.put("green", Color.green);
+        cssColors.put("blue", Color.blue);
+        cssColors.put("yellow", Color.yellow);
+        cssColors.put("cyan", Color.cyan);
+        cssColors.put("magenta", Color.magenta);
+        cssColors.put("gray", Color.gray);
+        cssColors.put("grey", Color.gray);
+        cssColors.put("darkgray", Color.darkGray);
+        cssColors.put("lightgray", Color.lightGray);
+        cssColors.put("orange", Color.orange);
+        cssColors.put("pink", Color.pink);
+        cssColors.put("purple", new Color(128, 0, 128));
+        cssColors.put("brown", new Color(165, 42, 42));
+        cssColors.put("lime", new Color(0, 255, 0));
+        cssColors.put("navy", new Color(0, 0, 128));
+        cssColors.put("teal", new Color(0, 128, 128));
+        cssColors.put("olive", new Color(128, 128, 0));
+        cssColors.put("maroon", new Color(128, 0, 0));
+        cssColors.put("silver", new Color(192, 192, 192));
+        cssColors.put("gold", new Color(255, 215, 0));
+        cssColors.put("coral", new Color(255, 127, 80));
+        cssColors.put("salmon", new Color(250, 128, 114));
+        cssColors.put("turquoise", new Color(64, 224, 208));
+        cssColors.put("violet", new Color(238, 130, 238));
+        cssColors.put("indigo", new Color(75, 0, 130));
+        cssColors.put("khaki", new Color(240, 230, 140));
+        cssColors.put("plum", new Color(221, 160, 221));
+        cssColors.put("orchid", new Color(218, 112, 214));
+        cssColors.put("crimson", new Color(220, 20, 60));
+        cssColors.put("chocolate", new Color(210, 105, 30));
+        cssColors.put("tan", new Color(210, 180, 140));
+        cssColors.put("beige", new Color(245, 245, 220));
+        cssColors.put("ivory", new Color(255, 255, 240));
+        cssColors.put("lavender", new Color(230, 230, 250));
+        cssColors.put("skyblue", new Color(135, 206, 235));
+        cssColors.put("steelblue", new Color(70, 130, 180));
+        cssColors.put("forestgreen", new Color(34, 139, 34));
+        cssColors.put("darkgreen", new Color(0, 100, 0));
+        cssColors.put("darkblue", new Color(0, 0, 139));
+        cssColors.put("darkred", new Color(139, 0, 0));
+        cssColors.put("hotpink", new Color(255, 105, 180));
+        cssColors.put("deeppink", new Color(255, 20, 147));
+    
     }
 
     /**
