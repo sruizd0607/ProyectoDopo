@@ -1,0 +1,59 @@
+Retrospectiva
+
+Ciclo 1
+1. ¿Cuáles fueron los mini-ciclos definidos? Justifíquenlos.
+Los mini-ciclos se dividieron por clases.
+Primero se empezó con Symbol, luego Wheel y finalmente SlotMachine
+Con SlotMachine al ser tan extenso, se dividieron los métodos a la clase que estaba ambientada, es decir se agruparon los métodos dirigidos a Wheel, los de Symbol y los de spin y se trabajaron como mini-ciclos.
+
+2. ¿Cuál es el estado actual del proyecto en términos de mini-ciclos? ¿por qué?
+Los mini-ciclos se completaron en su totalidad, la SlotMachine es funcional.
+
+3. ¿Cuál fue el tiempo total invertido por cada uno de ustedes? (Horas/Hombre)
+Se invirtieron alrededor de 8 horas por integrante.
+
+4. ¿Cuál consideran fue el mayor logro? ¿Por qué?
+El mayor logro fue poder realizar la implementación visual de la slotMachine sobre todo al momento de cambiar su configuración añadiendo o eliminando ruedas, ya que esto fue lo que más nos costó.
+
+5. ¿Cuál consideran que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+El mayor problema técnico fue el de la de actualizar el layout de las ruedas para ver en el canvas cada vez que se añadía o removía una rueda. Para resolverlo lo que hicimos fue pensar con diagramas en papel el como se debía actualizar el tamaño de la slotMachine y como reposicionar las ruedas usando una separación fija.
+
+6. ¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+Como equipo lo que hicimos bien fue que ambos cumplimos con un tiempo invertido similar y además avanzábamos en horarios que ambos estuviéramos libres para colaborarnos entre nosotros y no quedar perdidos.
+
+7. Considerando las prácticas XP incluidas en los laboratorios. ¿cuál fue la más útil? ¿por qué?
+La más útil fue tal vez Pair Programming ya que cuando estábamos con problemas para codificar e implementar métodos, entre los dos podíamos aportar ideas para solucionar esos problemas.
+
+8. ¿Qué referencias usaron? ¿Cuál fue la más útil? Incluyan citas con estándares adecuados.
+Usamos el API de Java, además de la guía proporcionada
+
+Ciclo 2
+
+1. ¿Cuáles fueron los mini-ciclos definidos? Justifíquenlos.
+El primer mini-ciclo fue agregar en Astah los métodos al diagrama de clases y los diagramas de secuencia.
+Luego se empezó por lock() y unlock(), ya que sentimos que era lo más básico para empezar y agregamos unos cambios a los métodos de spin para que tuvieran en cuenta si una rueda se encontraba locked.
+Posteriormente se realizó el método swap().
+El siguiente mini-ciclo fue el spin() por steps.
+Finalmente fue la implementación de spin() con una configuración determinada y las pruebas.
+
+2. ¿Cuál es el estado actual del proyecto en términos de mini-ciclos? ¿por qué?
+El proyecto está terminado, se implementaron todos los mini-ciclos y pruebas.
+
+3. ¿Cuál fue el tiempo total invertido por cada uno de ustedes? (Horas/Hombre)
+Para este ciclo del proyecto invertimos 5 horas cada integrante.
+
+4. ¿Cuál consideran fue el mayor logro? ¿Por qué?
+El mayor logro fue conseguir una animación adecuada al hacer spin por steps ya que creemos que es la que le da más realismo o funcionalidad a la SlotMachine.
+
+5. ¿Cuál consideran que fue el mayor problema técnico? ¿Qué hicieron para resolverlo?
+El mayor problema técnico era como hacer para que se viera en el canvas como cambiaban los símbolos de la rueda al hacer spin por steps, para resolverlo buscamos en internet donde encontramos que podíamos agregar un método setInterval, pero cuando lo íbamos a implementar,encontramos que el canvas de Shapes ya tenía un método para esperar antes de mostrar el nuevo canvas(que fue creado específicamente para que se pudiera ver como una animación), lo usamos y así pudimos implementar la rotación correctamente.
+
+6. ¿Qué hicieron bien como equipo? ¿Qué se comprometen a hacer para mejorar los resultados?
+Como equipo hicimos bien en explicarnos los avances que cada uno realizaba si trabajábamos por aparte, pero también trabajamos juntos para desarrollar mejor las ideas de implementación de los métodos.
+
+7. Considerando las prácticas XP incluidas en los laboratorios. ¿cuál fue la más útil? ¿por qué?
+La más útil fue tal vez Pair Programming ya que cuando estábamos con problemas para codificar e implementar métodos, entre los dos podíamos aportar ideas para solucionar esos problemas.
+
+8. ¿Qué referencias usaron? ¿Cuál fue la más útil? Incluyan citas con estándares adecuados.
+
+Animaciones básicas - API web | MDN. (2024, 28 julio). https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial/Basic_animations 

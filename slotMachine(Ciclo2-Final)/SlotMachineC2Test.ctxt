@@ -1,0 +1,17 @@
+#BlueJ class context
+#Fri Sep 11 17:49:32 COT 2026
+comment0.target=SlotMachineC2Test
+comment0.text=\r\n Pruebas de unidad del Ciclo 2 para SlotMachine.\r\n
+comment1.target=void setUp()
+comment10.target=void spinConfigWrongLengthFails()
+comment11.target=void spinConfigInvalidColorFails()
+comment12.target=void spinConfigSkipsLockedWheel()
+comment2.target=void swapExchangesSymbols()
+comment3.target=void swapInvalidPositionFails()
+comment4.target=void lockedWheelDoesNotSpin()
+comment5.target=void unlockedWheelSpins()
+comment6.target=void lockInvalidPositionFails()
+comment7.target=void spinStepsAdvancesPosition()
+comment8.target=void spinStepsLockedWheelFails()
+comment9.target=void spinConfigSetsConfiguration()
+numComments=13
