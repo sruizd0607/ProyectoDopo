@@ -1,0 +1,23 @@
+#BlueJ class context
+#Thu Oct 01 10:04:20 COT 2026
+comment0.target=Symbol
+comment0.text=\r\n Representa un simbolo de la maquina tragamonedas.\r\n
+comment1.params=color
+comment1.target=Symbol(java.lang.String)
+comment1.text=\r\n Construye un simbolo.\r\n @param color del simbolo.\r\n
+comment2.target=java.lang.String getColor()
+comment2.text=\r\n Obtiene el color del simbolo\r\n
+comment3.target=void makeVisible()
+comment3.text=\r\n Hace visible el simbolo\r\n
+comment4.target=void makeInvisible()
+comment4.text=\r\n Hace invisible el simbolo\r\n
+comment5.params=distance
+comment5.target=void moveHorizontal(int)
+comment5.text=\r\n Desplaza horizontalmente el s\u00EDmbolo en el canvas.\r\n Para ubicar las ruedas en columnas distintas\r\n @param distance desplazamiento horizontal\r\n
+comment6.params=color
+comment6.target=boolean isValidColor(java.lang.String)
+comment6.text=\r\n Verifica que el color es un nombre de CSS v\u00E1lido\r\n @param color a verificar\r\n @return true si es un color CSS reconocido\r\n
+comment7.params=milliseconds
+comment7.target=void showStep(int)
+comment7.text=\r\n Muestra el s\u00EDmbolo por pasos simulando una animaci\u00F3n, mientras\r\n realiza una pausa despu\u00E9s de mostrarlo.\r\n @param milliseconds tiempo de espera tras mostrar el s\u00EDmbolo\r\n
+numComments=8

@@ -1,0 +1,21 @@
+#BlueJ class context
+#Thu Oct 01 10:04:20 COT 2026
+comment0.target=SlotMachineC1Test
+comment0.text=\r\n Pruebas de Unidad del Ciclo 1 para SlotMachine.\r\n Prueba los m\u00E9todos de SlotMachine de gesti\u00F3n de ruedas y s\u00EDmbolos\r\n Spin de ruedas y visibilidad.\r\n
+comment1.target=void setUp()
+comment10.target=void placeSymbolShowsRequestedColor()
+comment11.target=void placeSymbolColorNotInWheelFails()
+comment12.target=void spinOneWheelChangesItsVisibleSymbol()
+comment13.target=void spinAllWheelsSetsAllVisibleSymbols()
+comment14.target=void distinctSymbolsCountsUniqueColors()
+comment15.target=void isJackpotTrueWhenAllWheelsMatch()
+comment16.target=void isJackpotFalseWhenWheelsDiffer()
+comment2.target=void addWheelAddsANewWheel()
+comment3.target=void addWheelCopiesSymbolsFromExistingWheels()
+comment4.target=void delWheelRemovesAnExistingWheel()
+comment5.target=void delWheelInvalidPositionFails()
+comment6.target=void addSymbolAddsColorToAllWheels()
+comment7.target=void addSymbolInvalidCssColorFails()
+comment8.target=void addSymbolDuplicateColorFails()
+comment9.target=void delSymbolRemovesColorFromAllWheels()
+numComments=17
